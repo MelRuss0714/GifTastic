@@ -16,7 +16,7 @@ $(document).ready(function () {
       // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
       var a = $("<button>");
       // Adding a class
-      a.addClass("men btn btn-success");
+      a.addClass("men btn btn-dark");
       // Adding a data-attribute with a value of the topic at index i
       a.attr("data-name", topics[i]);
       // Providing the button's text with a value of the topic at index i
@@ -45,8 +45,7 @@ $(document).ready(function () {
   renderButtons();
   $("button").on("click", function () {
     var person = $(this).attr("data-name");
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-      person + "&api_key=dc6zaTOxFJmzC&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=NsDtPNnfuLldTnO6zlkab0mHMMtKBHBm&q=" + person + "&limit=10&offset=0&rating=R&lang=en";
 
     $.ajax({
       url: queryURL,

@@ -1,13 +1,24 @@
+body {
+    background-image: url("../images/background.png");
+}
 button,
 div,
 form,
 input {
       margin: 10px;
 }
+p {
+    width: 75px;
+    font-weight: bolder;
+    font-family: 'Poiret One', cursive;
+    color: green;
+    background-color: white;
+}
 button {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Poiret One', cursive;
 }
 form {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: right;
+    background-color:white;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
 }
