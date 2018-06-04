@@ -2,18 +2,16 @@ $(document).ready(function () {
 
   var topics = ["Tom Hiddleson", "Han Solo", "Michael Fassbender", "Ewan McGregor", "Chris Pratt", "Chris Pine", "Tom Hardy", "Dave Matthews"];
 
-  // Function for displaying movie data
+  // Function for displaying topic names as buttons
   function renderButtons() {
 
-    // Deleting the movie buttons prior to adding new movie buttons
-    // (this is necessary otherwise we will have repeat buttons)
+    // Deleting the men buttons prior to adding new men buttons
     $("#men-view").empty();
 
-    // Looping through the array of movies
+    // Looping through the array of men
     for (var i = 0; i < topics.length; i++) {
 
       // Then dynamicaly generating buttons for each man in the array.
-      // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
       var a = $("<button>");
       // Adding a class
       a.addClass("men btn btn-dark");
@@ -34,15 +32,16 @@ $(document).ready(function () {
 
     // This line will grab the text from the input box
     var topic = $("#man-input").val().trim();
-    // The movie from the textbox is then added to our array
+    // The person from the textbox is then added to our array
     topics.push(topic);
 
-    // calling renderButtons which handles the processing of our movie array
+    // calling renderButtons which handles the processing of our man array
     renderButtons();
   });
 
-  // Calling the renderButtons function at least once to display the initial list of movies
+  // Calling the renderButtons function at least once to display the initial list of men
   renderButtons();
+  //on click function that searches the API when the button is pushed
   $("button").on("click", function () {
     var person = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=NsDtPNnfuLldTnO6zlkab0mHMMtKBHBm&q=" + person + "&limit=10&offset=0&rating=R&lang=en";
@@ -75,7 +74,6 @@ $(document).ready(function () {
       });
   });
   $("body").on("click", ".gif", function() {
-    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
 
     var state = $(this).attr("data-state");
     // If the clicked image's state is still, update its src attribute to what its data-animate value is.

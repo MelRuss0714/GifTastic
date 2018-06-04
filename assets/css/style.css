@@ -1,6 +1,19 @@
 body {
     background-image: url("../images/background.png");
 }
+.heading {
+    background-color: black;
+    color:#ffffff;
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+}
+h2{
+    font-size: 12pt;
+
+}
+
 button,
 div,
 form,
